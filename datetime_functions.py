@@ -11,13 +11,14 @@ def current_date():
     date_sections = elements[0]
     return date_sections
 
+
 # Testing
 # print(current_date())
 
 
 def current_time():
     """
-    Ge the current time of day
+    Get the current time of day
     :return: string
     """
     tday = str(datetime.datetime.now())
