@@ -11,3 +11,7 @@ def get_DHT11_output():
     data.append(temperature)
     data.append(humidity)
     return data
+
+
+# Testing
+# print(get_DHT11_output())
