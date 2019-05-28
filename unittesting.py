@@ -16,3 +16,8 @@ class UnitTesting(unittest.TestCase):
         result = DF.current_date()
         self.assertEqual(str(type(result)), "<class 'str'>")
         self.assertEqual(len(result), 10)
+
+
+
+if __name__ == '__main__':
+    unittest.main()
