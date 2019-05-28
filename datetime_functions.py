@@ -3,7 +3,7 @@ import datetime
 
 def current_date():
     """
-    Get the current date and return it.
+    Get the current date
     :return: string
     """
     tday = str(datetime.datetime.now())
