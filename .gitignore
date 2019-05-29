@@ -3,7 +3,8 @@ MacOS Finder Junk:
 
 
 # Jetbrains IDE Settings
-.idea
+.idea/
+.xml
 
 
 # Byte-compiled / optimized / DLL files
