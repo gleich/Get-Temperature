@@ -2,18 +2,25 @@ import gspread
 from oauth2client.service_account  import ServiceAccountCredentials
 
 
-scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+def update_sheet(temp, humidity, date, time):
+    """
+    Will update the data on the google sheet
+    :param temp: temperature from the raspberry pi
+    :param humidity: humidity from the raspberry pi
+    :param date: current date
+    :param time: reading time
+    """
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
+             "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
+    creds = ServiceAccountCredentials.from_json_keyfile_name("gs_creds.json", scope)
+    client = gspread.authorize(creds)
+    sheet = client.open("TH_Program").sheet1
+    sheet.update_cell(2, 1, temp)
+    sheet.update_cell(2, 2, humidity)
+    sheet.update_cell(2, 3, date)
+    sheet.update_cell(2, 4, time)
 
-creds = ServiceAccountCredentials.from_json_keyfile_name("gs_creds.json", scope)
 
-client = gspread.authorize(creds)
 
-sheet = client.open("TH_Program").sheet1
-
-data = sheet.get_all_records()
-
-row = sheet.row_values(3)
-
-insertRow = ["Hello", "5", "red", "blue"]
-
-sheet.insert_row(insertRow, 4)
+# Testing:
+# update_sheet(23, 34, 2, 3)
