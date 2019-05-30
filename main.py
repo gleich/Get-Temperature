@@ -17,6 +17,8 @@ def main():
 
 
 while True:
+    print("Started reading:", DF.current_date(), DF.current_time())
     main()
-    print("Updated sheet at",DF.current_date(),DF.current_time())
+    print("Updated sheet at", DF.current_date(), DF.current_time())
+    print("\n")
     time.sleep(20)
