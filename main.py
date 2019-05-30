@@ -18,4 +18,5 @@ def main():
 
 while True:
     main()
+    print("Updated sheet at",DF.current_date(),DF.current_time())
     time.sleep(20)
