@@ -19,6 +19,7 @@ def update_sheet(temp, humidity, date, time):
     sheet.update_cell(2, 2, humidity)
     sheet.update_cell(2, 3, date)
     sheet.update_cell(2, 4, time)
+    return None
 
 
 
