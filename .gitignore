@@ -1,5 +1,5 @@
 Google API Credentials:
-credentials.json
+gs_creds.json
 
 
 MacOS Finder Junk:
@@ -69,5 +69,3 @@ docs/_build/
 
 # PyBuilder
 target/
-
-*.json
