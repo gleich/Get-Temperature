@@ -26,7 +26,7 @@ def main():
     creds = ServiceAccountCredentials.from_json_keyfile_name("gs_creds.json", scope)
     client = gspread.authorize(creds)
     newest_info_sheet = client.open("TH_Newest").sheet1
-    stored_sheet = client.open("Th_Stored").sheet1
+    stored_sheet = client.open("TH_Stored").sheet1
     GS.update_new_version_sheet(current_temperature, temp_fahrenheit, current_humidity, current_date, current_time, newest_info_sheet)
     GS.update_stored_sheet(current_temperature, temp_fahrenheit, current_humidity, current_date, current_time, stored_sheet)
 
