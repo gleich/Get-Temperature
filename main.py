@@ -21,7 +21,7 @@ def main():
     print("Got Current Date")
     current_time = DF.current_time()
     print("Got current time")
-    temp_fahrenheit = str((float(current_temperature) * (9 / 5)) + 32)
+    temp_fahrenheit = str(int((float(current_temperature) * (9 / 5)) + 32))
     scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets",
              "https://www.googleapis.com/auth/drive.file", "https://www.googleapis.com/auth/drive"]
     creds = ServiceAccountCredentials.from_json_keyfile_name("gs_creds.json", scope)
