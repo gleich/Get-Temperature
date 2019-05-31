@@ -20,7 +20,7 @@ In order to write to the google sheet, the program needs a file called `gs_creds
 
 
 ## Requirements
-If you already have python3 install and pip install on your machine, you can just the following command while in this directory to install all of modules `pip freeze > requirements.txt`. There is one module that is needed to interact with the raspberry pi. That module is called Adafruit_DHT and it can be installed by running the following commands:
+If you already have python3 install and pip install on your machine, you can just the following command while in this directory to install all of modules `pip install -r requirements.txt`. There is one module that is needed to interact with the raspberry pi. That module is called Adafruit_DHT and it can be installed by running the following commands:
 1. `git clone https://github.com/adafruit/Adafruit_Python_DHT.git`
 2. `cd Adafruit_Python_DHT`
 3. `sudo apt-get install build-essential python-dev`
