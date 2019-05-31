@@ -17,3 +17,14 @@ Below is a list of all the features of this program:
 ## Missing files
 In order to write to the google sheet, the program needs a file called `gs_creds.json` that holds the API key for the Google Sheet. If you are looking for a tutorial on how to get this key, here is a link to a tutorial on how:
 [Tutorial Video](https://www.youtube.com/watch?v=cnPlKLEGR7E)
+
+
+## Requirements
+If you already have python3 install and pip install on your machine, you can just the following command while in this directory to install all of modules `pip freeze > requirements.txt`. There is one module that is needed to interact with the raspberry pi. That module is called Adafruit_DHT and it can be installed by running the following commands:
+1. `git clone https://github.com/adafruit/Adafruit_Python_DHT.git`
+2. `cd Adafruit_Python_DHT`
+3. `sudo apt-get install build-essential python-dev`
+4. `sudo python setup.py install`
+
+## Contributors
+* Matthew Gleich (@Matt-Gleich)
