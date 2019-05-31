@@ -44,4 +44,4 @@ while True:
     main()
     times += 1
     print("Run number",times)
-    time.sleep(60)
+    time.sleep(180)
