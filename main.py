@@ -41,7 +41,7 @@ def main():
 
 while True:
     times = 0
+    print("Run number", times)
     main()
     times += 1
-    print("Run number",times)
     time.sleep(180)
