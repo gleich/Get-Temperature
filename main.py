@@ -40,8 +40,6 @@ def main():
 
 
 while True:
-    times = 0
-    print("Run number", times)
+    print("Next reading in 3 minutes")
     main()
-    times += 1
     time.sleep(180)
