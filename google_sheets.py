@@ -23,7 +23,7 @@ def update_new_version_sheet(temp, temp_f, humidity, date, time, sheet):
 # update_sheet(23, 34, 2, 3)
 
 
-def update_stored_sheet(temp, temp_f, humidity, date, time, sheet):
+def update_stored_sheet(temp, humidity, date, time, sheet):
     """
     Will update the data on the google sheet that is storing all the data
     :param temp: temperature from the raspberry pi
@@ -33,5 +33,5 @@ def update_stored_sheet(temp, temp_f, humidity, date, time, sheet):
     :param time: reading time
     :param sheet: sheet that will be updated
     """
-    row = [temp, temp_f, humidity, date, time]
+    row = [temp, humidity, date, time]
     sheet.insert_row(row, 2)
