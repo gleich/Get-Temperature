@@ -4,13 +4,14 @@ import google_sheets as GS
 import time
 import gspread
 from oauth2client.service_account  import ServiceAccountCredentials
+import json
 
 
 def main():
     """
     Runs the whole program
     """
-    print("Started to get infomation")
+    print("Started to get information")
     DHT11_info = RPF.get_DHT11_output()
     current_temperature = DHT11_info[0]
     print("Got temp")
@@ -28,8 +29,14 @@ def main():
     newest_info_sheet = client.open("TH_Newest").sheet1
     stored_sheet = client.open("TH_Stored").sheet1
     GS.update_new_version_sheet(current_temperature, temp_fahrenheit, current_humidity, current_date, current_time, newest_info_sheet)
+    print("Data written to new version sheet")
     GS.update_stored_sheet(current_temperature, temp_fahrenheit, current_humidity, current_date, current_time, stored_sheet)
-
+    print("Data written to stored version sheet")
+    with open("data.json", "a") as data_json:
+        data = [current_temperature, temp_fahrenheit, current_humidity, current_date, current_time]
+        json.dump(data, data_json)
+        print("Data written to JSON")
+        print("\n------------------------------------------\n")
 
 
 while True:
