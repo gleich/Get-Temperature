@@ -30,7 +30,7 @@ def main():
     stored_sheet = client.open("TH_Stored").sheet1
     GS.update_new_version_sheet(current_temperature, temp_fahrenheit, current_humidity, current_date, current_time, newest_info_sheet)
     print("Data written to new version sheet")
-    GS.update_stored_sheet(current_temperature, temp_fahrenheit, current_humidity, current_date, current_time, stored_sheet)
+    GS.update_stored_sheet(current_temperature, current_humidity, current_date, current_time, stored_sheet)
     print("Data written to stored version sheet")
     with open("data.json", "a") as data_json:
         data = [current_temperature, temp_fahrenheit, current_humidity, current_date, current_time]
@@ -40,5 +40,8 @@ def main():
 
 
 while True:
+    times = 0
     main()
+    times += 1
+    print("Run number",times)
     time.sleep(60)
