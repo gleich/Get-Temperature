@@ -26,15 +26,7 @@ def light(pin):
     :param high: if the light should be high or low. Boolean
     :return: None
     """
-    if DF.day_time():
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(pin, GPIO.OUT)
-        GPIO.output(pin, GPIO.HIGH)
-        GPIO.cleanup()
-    else:
-        GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(pin, GPIO.OUT)
-        p = GPIO.PWM(7,100)
-        p.start(0)
-        p.stop()
-        GPIO.cleanup()
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(pin, GPIO.OUT)
+    GPIO.output(pin, GPIO.HIGH)
+    GPIO.cleanup()
