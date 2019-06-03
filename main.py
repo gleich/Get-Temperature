@@ -39,9 +39,14 @@ def main():
         print("\n------------------------------------------\n")
 
 
-RPF.light(20)
-while True:
-    RPF.light(21)
-    print("Next reading in 3 minutes")
-    main()
-    time.sleep(180)
+try:
+    RPF.light(20)
+    while True:
+        RPF.light(21)
+        print("Next reading in 3 minutes")
+        main()
+        time.sleep(180)
+        RPF.off_light(21, False)
+
+except:
+    RPF.off_light(None, True)
