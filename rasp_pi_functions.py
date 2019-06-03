@@ -38,11 +38,11 @@ def light(pin):
 
 
 
-def off_light(pin, all):
+def off_light(pin, reset):
     """
     Will turn off a light
     :param pin: The GPIO pin number of the LED
-    :param all: if all the pins should be turned off. Boolean
+    :param reset: if all the pins should be turned off. Boolean
     :return: None
     """
     if not all:

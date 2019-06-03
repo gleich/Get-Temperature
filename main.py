@@ -46,4 +46,3 @@ while True:
     main()
     RPF.off_light(21, False)
     time.sleep(180)
-    
