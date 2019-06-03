@@ -21,9 +21,8 @@ def get_DHT11_output():
 
 def light(pin):
     """
-    Will light the blue light. This light is to show that program is running
+    Will turn on a light
     :param pin: the GPIO pin number of the LED.
-    :param high: if the light should be high or low. Boolean
     :return: None
     """
     if DF.day_time():
@@ -36,3 +35,17 @@ def light(pin):
         p = GPIO.PWM(7, 100)
         p.start(0)
         p.stop()
+
+
+
+def off_light(pin, all):
+    """
+    Will turn off a light
+    :param pin: The GPIO pin number of the LED
+    :param all: if all the pins should be turned off. Boolean
+    :return: None
+    """
+    if not all:
+        GPIO.output(pin, GPIO.LOW)
+    else:
+        GPIO.cleanup()
