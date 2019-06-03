@@ -39,3 +39,23 @@ def current_time():
 
 # Testing
 # print(current_time())
+
+
+
+def day_time():
+    """
+    See if the time is between 7AM-9PM or if its at any other time.
+    :return: int of hour
+    """
+    now = datetime.datetime.now()
+    time = now.time()
+    time_elements = str(time).split(":")
+    current_hour = int(time_elements[0])
+    if current_hour >= 9 or current_hour <= 7:
+        return True
+    else:
+        return False
+
+
+# Testing
+# print(day_time())
