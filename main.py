@@ -49,3 +49,6 @@ while True:
         RPF.off_light(21, False)
         time.sleep(180)
     else:
+        print("Next reading in 3 minutes")
+        main()
+        time.sleep(180)
