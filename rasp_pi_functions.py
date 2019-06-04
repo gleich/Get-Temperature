@@ -1,6 +1,4 @@
 import Adafruit_DHT
-import RPi.GPIO as GPIO
-import datetime_functions as DF
 
 
 def get_DHT11_output():
@@ -17,24 +15,3 @@ def get_DHT11_output():
 
 # Testing
 # print(get_DHT11_output())
-
-
-def light(pin):
-    """
-    Will turn on a light
-    :param pin: the GPIO pin number of the LED.
-    :return: None
-    """
-    GPIO.setup(pin, GPIO.OUT)
-    GPIO.output(pin, GPIO.HIGH)
-
-
-
-def off_light(pin):
-    """
-    Will turn off a light
-    :param pin: The GPIO pin number of the LED
-    :return: None
-    """
-    GPIO.setmode(GPIO.BCM)
-    GPIO.output(pin, GPIO.LOW)

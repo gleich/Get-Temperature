@@ -5,6 +5,7 @@ import time
 import gspread
 from oauth2client.service_account  import ServiceAccountCredentials
 import json
+import RPi.GPIO as GPIO
 
 
 def main():
@@ -41,12 +42,15 @@ def main():
 
 while True:
     if DF.day_time():
-        RPF.off_light(20)
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(20, GPIO.OUT)
+        GPIO.output(20, GPIO.LOW)
+        GPIO.setup(21, GPIO.OUT)
         print("Next reading in 3 minutes")
-        RPF.light(21)
+        GPIO.output(21, GPIO.HIGH)
         main()
-        RPF.off_light(21)
-        RPF.light(20)
+        GPIO.output(21, GPIO.LOW)
+        GPIO.output(20, GPIO.HIGH)
         time.sleep(180)
     else:
         print("Next reading in 3 minutes")
