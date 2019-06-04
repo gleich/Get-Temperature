@@ -25,16 +25,9 @@ def light(pin):
     :param pin: the GPIO pin number of the LED.
     :return: None
     """
-    if DF.day_time():
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(pin, GPIO.OUT)
-        GPIO.output(pin, GPIO.HIGH)
-    else:
-        GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(pin, GPIO.OUT)
-        p = GPIO.PWM(7, 100)
-        p.start(0)
-        p.stop()
+    GPIO.setmode(GPIO.BCM)
+    GPIO.setup(pin, GPIO.OUT)
+    GPIO.output(pin, GPIO.HIGH)
 
 
 
