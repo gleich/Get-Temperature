@@ -24,7 +24,7 @@ If you already have python3 install and pip install on your machine, you can jus
 1. `git clone https://github.com/adafruit/Adafruit_Python_DHT.git`
 2. `cd Adafruit_Python_DHT`
 3. `sudo apt-get install build-essential python-dev`
-4. `sudo python setup.py install`
+4. `sudo python3 setup.py install`
 
 ## Contributors
 * Matthew Gleich (@Matt-Gleich)
