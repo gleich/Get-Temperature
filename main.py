@@ -41,12 +41,12 @@ def main():
 
 while True:
     if DF.day_time():
-        RPF.light(20)
+        RPF.off_light(20)
         print("Next reading in 3 minutes")
-        RPF.off_light(20, False)
         RPF.light(21)
         main()
-        RPF.off_light(21, False)
+        RPF.off_light(21)
+        RPF.light(20)
         time.sleep(180)
     else:
         print("Next reading in 3 minutes")
