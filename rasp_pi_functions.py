@@ -25,7 +25,6 @@ def light(pin):
     :param pin: the GPIO pin number of the LED.
     :return: None
     """
-    GPIO.setmode(GPIO.BCM)
     GPIO.setup(pin, GPIO.OUT)
     GPIO.output(pin, GPIO.HIGH)
 
@@ -37,4 +36,5 @@ def off_light(pin):
     :param pin: The GPIO pin number of the LED
     :return: None
     """
+    GPIO.setmode(GPIO.BCM)
     GPIO.output(pin, GPIO.LOW)
