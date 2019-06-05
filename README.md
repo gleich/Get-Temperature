@@ -13,6 +13,7 @@ Below is a list of all the features of this program:
 2. Gets that data and writes it a JSON locally.
 3. Updates the data to a Google Sheet that shows the most recent reading
 4. Writes the data to a Google Sheet that lists all the readings
+5. Has LED indicators that show when the proram is reading info, or idle.
 
 ## Missing files
 In order to write to the google sheet, the program needs a file called `gs_creds.json` that holds the API key for the Google Sheet. If you are looking for a tutorial on how to get this key, here is a link to a tutorial on how:
