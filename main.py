@@ -53,7 +53,10 @@ while True:
         GPIO.output(20, GPIO.HIGH)
         time.sleep(180)
     else:
-        GPIO.cleanup()
+        GPIO.output(20, GPIO.HIGH)
+        GPIO.output(20, GPIO.LOW)
+        GPIO.output(21, GPIO.HIGH)
+        GPIO.output(21, GPIO.LOW)
         print("Next reading in 3 minutes")
         main()
         time.sleep(180)
