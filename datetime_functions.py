@@ -50,11 +50,11 @@ def day_time():
     time = now.time()
     time_elements = str(time).split(":")
     current_hour = int(time_elements[0])
-    if current_hour >= 10 or current_hour <= 7:
-        return True
-    else:
+    if current_hour <= 6 or current_hour >= 23:
         return False
+    else:
+        return True
 
 
 # Testing
-# print(day_time())
+print(day_time())
