@@ -35,7 +35,7 @@ def update_stored_sheet(temp, humidity, date, time, sheet):
     """
     row = [temp, humidity, date, time]
     sheet.insert_row(row, 2)
-    sheet.update_cell(480, 1, " ")
-    sheet.update_cell(480, 2, " ")
-    sheet.update_cell(480, 3, " ")
-    sheet.update_cell(480, 4, " ")
+    sheet.update_cell(481, 1, " ")
+    sheet.update_cell(481, 2, " ")
+    sheet.update_cell(481, 3, " ")
+    sheet.update_cell(481, 4, " ")
